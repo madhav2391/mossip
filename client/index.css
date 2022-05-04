@@ -1,0 +1,225 @@
+body{
+    background-color:#9bf6ff;
+ }
+ 
+ .group_card{
+       display:flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+       margin:30px;
+       margin-top:1px;
+      margin-bottom:1px;
+       margin-left:320px;
+       margin-right:370px;
+       padding-left:17px;
+       padding-top:2px;
+       padding-bottom:2px;
+       position: relative;
+ }
+ 
+ .flip-card {
+    background-color: transparent;
+    margin:5px;
+    width: 140px;
+    height: 150px;
+    perspective: 1000px; /* Remove this if you don't want the 3D effect */
+    /*position:absolute;*/
+  }
+  
+  /* This container is needed to position the front and back side */
+  .flip-card-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    transition: transform 0.8s;
+    transform-style: preserve-3d;
+  }
+  
+  /* Do an horizontal flip when you move the mouse over the flip box container */
+  .toggle{
+    transform: rotateY(180deg);
+  }
+  
+  /* Position the front and back side */
+  .flip-card-front, .flip-card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    -webkit-backface-visibility: hidden; /* Safari */
+    backface-visibility: hidden;
+  }
+  
+  /* Style the front side (fallback if image is missing) */
+  .imag1{
+     height:100%;
+     width:100%;
+  }
+  .flip-card-front {
+    background-color: #0081a7 !important;
+    border-radius: 3%;
+    color: black;
+  }
+  
+  /* Style the back side */
+  .flip-card-back {
+    background-color:#ffd97d; /*#F0E68C, */
+    border-radius: 3%;
+    transform: rotateY(180deg);
+  }
+ 
+  .adj{
+     color:red;
+     font-size:70px ;
+     margin:15px;
+  }
+ 
+   #aside1{
+     margin-top:15px;
+     margin-left:270px;
+     float:left
+   }
+ 
+  .aside2{
+ 
+     width:190px;
+    margin:100px;
+     margin-left:70px;
+    margin-right:130px;
+    float:right;
+    height:300px;
+    border-width:5px;
+  }
+ 
+  .time{
+     margin-left:50px;
+     margin-right:50px;
+    margin-top:5px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size:20px;
+    text-align:center
+  }
+ 
+  .display-time{
+      font-family:'Amarante';
+      margin-left:23px;
+ 
+  }
+ 
+  .move{
+   font-family: Georgia, 'Times New Roman', Times, serif;
+   font-size:20px;
+   margin-left:50px;
+   margin-right:50px;
+  }
+ 
+  #moves{
+   font-family:'Aldrich';
+   font-weight:bold;
+   font-size: 20px;
+   color:#023047;
+    margin-top:10px;
+    margin-left:67px;
+    margin-right:67px;
+    padding:1px;
+    border:3px solid #00FF00!important;
+  }
+ 
+  #reset{
+      font-family: sans-serif;
+      margin:60px;
+      font-size:12px ;
+      letter-spacing:2px;
+  }
+ 
+  .border{
+    border:5px solid #F4A460!important;
+  }
+ 
+  #minutes{
+   font-family:'Aldrich';
+   font-weight: bold;
+   padding:2px 5px;
+   margin:1px;
+   color:#ae2012;
+   border:3px solid #9b2226!important;
+  }
+ 
+  #seconds{
+   font-family:'Aldrich';
+   font-weight: bold;
+   padding:2px 5px;
+   margin:1px;
+   color:#ae2012;
+   border:3px solid #9b2226!important;
+  }
+ 
+  #volume{
+    font-size:25px ;
+  }
+  #mute{
+   font-size:25px ;
+  }
+ 
+  #flip-alert{
+    margin:30px;
+  }
+ 
+  .child{
+     position:absolute;
+    top:0px;
+  }
+ 
+  #final-display{
+   height:340px;
+   width:670px;
+    margin-left:300px;
+    margin-top:150px;
+    background-color: #fee440;
+  }
+ 
+  .img1{
+      width:30px;
+     height:30px;
+  }
+ 
+ 
+ 
+  #final-text{
+   font-family: 'Black And White Picture';
+    font-size:25px;
+    font-weight: bold;
+     color:#ee6c4d;
+     /*margin-top:10px;*/
+  }
+ 
+  #final-time{
+   font-family: 'Black And White Picture';
+     font-size:20px;
+      margin-top: 20px;
+      margin-left:30%;
+  }
+ 
+  #final-moves{
+   font-family: 'Black And White Picture';
+   font-size:20px;
+       margin-top:20px;
+       margin-left:30%;
+  }
+ 
+  #final-rating{
+   font-family: 'Black And White Picture';
+   font-size:20px;
+     margin-top:30px;
+     margin-left:30%;
+  }
+  #final-button{
+      margin-top:60px;
+      margin-left:150px;
+      margin-right:150px;
+  }
+ 
+  .checked{
+   color: orange;
+  }
+ 
