@@ -1,12 +1,12 @@
-#forget-page{
+#forgetPage{
     font-family: 'Times New Roman', Times, serif;
      margin:30%;
-     margin-top:10%;
-     height:200px;
+     margin-top:15%;
+     height:250px;
      width:500px;
-     padding-left:8%;
-     padding-right:3%;
-     padding-top:3%;
+     padding-left:0%;
+     padding-right:0%;
+     padding-top:2%;
      font-size:20px;
 }
 
@@ -27,4 +27,25 @@
     margin-top:8%;
     margin-left:15%;
     width:300px;
+}
+.text-style{
+    margin-left:-72%;
+}
+
+.text-style1{
+    margin-left:-53%;
+}
+.text-style2{
+    margin-left:-68%;
+}
+#conforPage{
+    font-family: 'Times New Roman', Times, serif;
+     margin:32%;
+     margin-top:15%;
+     height:250px;
+     width:500px;
+     padding-left:0%;
+     padding-right:0%;
+     padding-top:2%;
+     font-size:20px;
 }
