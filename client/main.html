@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    <link href='https://fonts.googleapis.com/css?family=Akronim' rel='stylesheet'>
+    <link href='https://fonts.googleapis.com/css?family=Aldrich' rel='stylesheet'>
+    <link href='https://fonts.googleapis.com/css?family=Amarante' rel='stylesheet'>
+    <link href='https://fonts.googleapis.com/css?family=Audiowide' rel='stylesheet'>
+    <link href='https://fonts.googleapis.com/css?family=Almendra' rel='stylesheet'>
+    <link href='https://fonts.googleapis.com/css?family=Bungee Shade' rel='stylesheet'>
+    <link href='https://fonts.googleapis.com/css?family=Allan' rel='stylesheet'>
+    <link href='https://fonts.googleapis.com/css?family=Bonbon' rel='stylesheet'>
+    <link href='https://fonts.googleapis.com/css?family=Cantora One' rel='stylesheet'>
+    <link rel="stylesheet" href="./main.css">
+    <style>
+      .dropdown-toggle::after {
+          content: none;
+      }   
+      .dropdown-item:hover{
+          background-color:#8ecae6;
+      }
+      .dropdown-item{
+        font-family: 'Cantora One';
+      }
+
+  </style>
+    <script src="./easy/easy.js"></script>
+    <script src="./medium/medium.js"></script>
+    <script src="./hard/hard.js"></script>
+    <title>main_page</title>
+</head>
+<body class='parent'> 
+  <div class="dropdown">
+    <button class="btn btn-secondary dropdown-toggle m-2"
+            type="button"
+            id="dropdownMenuButton" 
+            data-toggle="dropdown" 
+            aria-haspopup="true"
+            aria-expanded="false">
+            <i class="fas fa-bars"></i>
+    </button>
+    
+    <div class="dropdown-menu bg-warning" 
+         aria-labelledby="dropdownMenuButton">
+        <a class="dropdown-item" href="./main_page.html">
+           Home
+      </a>
+        <a class="dropdown-item" href="./easy/easy.html">
+           Easy
+      </a>
+        <a class="dropdown-item" href="./medium/medium.html">
+          Medium
+      </a>
+      <a class="dropdown-item" href="./hard/hard.html">
+        Hard
+    </a>
+    <a class="dropdown-item" href="./index.html">
+      SignOut <i class="fas fa-sign-out-alt"></i>
+  </a>
+    </div>
+</div>
+
+               <div class="container  m-2"> 
+                <h1 class="shadow text-center bg-warning rounded" id='matching-memory'>Matching Memory Game</h1>
+                <ul class="list-group" id='combined'>
+                  <li class="list-group-item btn btn-secondary bg-danger" id='main-instr'>
+                   INSTRUCTIONS
+                  </li>
+                  <li class="list-group-item btn btn-secondary bg-danger" id='levels'>LEVELS</li>
+                </ul>
+               </div>
+</body>
+</html>
