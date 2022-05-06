@@ -9,11 +9,17 @@ Backend : node js
 
 HOW TO ADD DATABASE:
 
-$ mysql -u root -p
-$ enter password:
-> create database memorygame;
-> create user sampleuser1 by 'Game@123';
-> use memorygame;
-> grant all privileges on memorygame to sampleuser1;
-> grant all privileges on memorygame.* to sampleuser1; 
+> $ mysql -u root -p
+
+> $ enter password:
+
+> \> create database memorygame;
+
+> \> create user sampleuser1 by 'Game@123';
+
+> \> use memorygame;
+
+> \> grant all privileges on memorygame to sampleuser1;
+
+> \> grant all privileges on memorygame.* to sampleuser1; 
   
