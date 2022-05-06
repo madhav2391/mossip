@@ -1,0 +1,76 @@
+img{
+    width:100%;
+}
+
+
+.child{
+   position:absolute;
+   top:0px;
+}
+#combined{
+  
+    margin:100px;
+    margin-left:520px;
+    margin-right:370px;
+}
+
+#level-list{
+      
+    margin:10px;
+    margin-left:15px;
+    margin-right:15px;
+}
+
+#link-button{
+    margin:380px;
+    margin-bottom:0px;
+    margin-left:600px;
+}
+
+#matching-memory{
+    font-family: 'Audiowide';
+    width:600px;
+    letter-spacing:3px ;
+    height: 110px;
+    margin:10px;
+    margin-left:350px;
+    margin-right:200px;
+    padding:10px;
+}
+
+/*#level-list{
+    margin:100px;
+    margin-left:550px;
+    margin-right:380px;
+}*/
+
+#instructions{
+     font-family:'Courier New', Courier, monospace;
+    margin:5px;
+    font-weight:bold;
+   font-size:18px;
+}
+
+#level-list a{
+    font-family: 'Bungee Shade';
+    color:#023047;
+    font-size:20px;
+    font-weight:bold;
+     letter-spacing:2px;
+}
+
+#main-instr{
+    font-family:'Almendra';
+    letter-spacing: 2px;
+    font-size:20px;
+    font-weight:bold;
+    color:#003049;
+}
+
+#levels{
+    font-family:'Almendra';
+    letter-spacing: 3px;
+    font-size:20px;
+    font-weight:bold;
+    color:#003049;
+}
