@@ -18,7 +18,7 @@ jobs:
     - uses: actions/checkout@v3
     #- uses: actions/setup-node@v3
     - name: Build the Docker image
-      run: docker build . --file Dockerfile --tag ${{secrets.DOCKERUSER}}/memgame
+      run: docker build . --file Dockerfile --tag madhavpasumarthy/memgame
    
     - name: Docker Login
       env: 
