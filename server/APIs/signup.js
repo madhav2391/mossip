@@ -1,4 +1,4 @@
-const user=require('../../dataBase.js').Users
+const user=require('../dataBase.js').Users
 const route=require('express').Router()
 
 route.post('/',(req,res)=>{

@@ -1,4 +1,4 @@
-const user=require('../../dataBase.js').Users
+const user=require('../dataBase.js').Users
 const route=require('express').Router()
 const nodemailer = require('nodemailer');
 let random_otp,storeemail;
@@ -27,7 +27,7 @@ route.post('/',(req,res)=>{
          }
          else 
          {
-           res.redirect('../../passwordModifications/confirmation.html');  
+           res.redirect('../../passwordModifications/conformation.html');  
             const mailOptions = { 
            from: 'webdevlopment0501@gmail.com',
            to:req.body.forgetemail,           
@@ -55,7 +55,7 @@ route.post('/otp',(req,res)=>{
         const otp=parseInt(req.body.changeotp);
              if(otp===random_otp)
              {
-               res.redirect('../../forget-password/changepassword.html');  
+               res.redirect('../../passwordModifications/changePassword.html');  
               }
              else   
              { 
