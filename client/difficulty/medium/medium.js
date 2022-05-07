@@ -36,9 +36,9 @@ $(function(){
 
       if(levels==0){
         $(`<div class="list-group" id='level-list'>
-        <a href="../easy/easy.html" class="list-group-item list-group-item-action text-center bg-light" id='easy'>Easy</a>
-        <a href="../medium/medium.html" class="list-group-item list-group-item-action text-center bg-primary" id='medium'>Medium</a>
-        <a href="../hard/hard.html" class="list-group-item list-group-item-action text-center bg-success" id='hard'>Hard</a>
+        <a href="./difficulty/easy/easy.html" class="list-group-item list-group-item-action text-center bg-light" id='easy'>Easy</a>
+        <a href="./difficulty/medium/medium.html" class="list-group-item list-group-item-action text-center bg-primary" id='medium'>Medium</a>
+        <a href="./difficulty/hard/hard.html" class="list-group-item list-group-item-action text-center bg-success" id='hard'>Hard</a>
       </div>`).insertAfter('#levels');
         levels=1;
       }
