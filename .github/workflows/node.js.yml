@@ -28,12 +28,12 @@ jobs:
    
     - name: Docker Login
       env: 
-        DOCKERUSER: ${{secrets.DOCKERUSER}}
-        DOCKERPWD: ${{secrets.DOCKERPWD}}
-      run: echo "$DOCKERUSER"
+        Docker_Usr: ${{secrets.DOCKER_USER}}
+        Docker_Pwd: ${{secrets.DOCKER_PWD}}
+#       run: echo "$DOCKERUSER"
 #       run: echo "$DOCKERPWD"
 
-#       run: docker login -username=madhavpasumarthy -password=Madhav@19
+      run: docker login -u $Docker_Usr -p $Docker_Pwd
 #     - name: Use Node.js ${{ matrix.node-version }}
 #       uses: actions/setup-node@v3
 #       with:
