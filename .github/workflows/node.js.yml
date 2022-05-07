@@ -17,6 +17,12 @@ jobs:
     steps:
     - uses: actions/checkout@v3
     #- uses: actions/setup-node@v3
+    - name: List files in the repository
+      run: |
+          ls
+    - name: pwd  the repository
+      run: |
+          pwd
     - name: Build the Docker image
       run: docker build . --file ./server/Dockerfile --tag madhavpasumarthy/memgame
    
