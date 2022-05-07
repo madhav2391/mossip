@@ -13,11 +13,11 @@ route.post('/',(req,res)=>{
            console.log(output);
             if(output===null) 
             { 
-              res.status(202).redirect('./../../index.html');
+              res.status(202).redirect('./../index.html');
             }
             else 
             {
-              res.status(201).redirect('./../../main.html');   
+              res.status(201).redirect('./../main.html');   
             } 
       }).catch((err)=>{res.status(501).send({error:"user is not added"})})
  
