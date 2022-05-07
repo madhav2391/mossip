@@ -17,7 +17,7 @@ route.post('/',(req,res)=>{
             }
             else 
             {
-              res.status(201).redirect('./../../main_page.html');   
+              res.status(201).redirect('./../../main.html');   
             } 
       }).catch((err)=>{res.status(501).send({error:"user is not added"})})
  
