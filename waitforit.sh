@@ -12,5 +12,5 @@ echo "returning from sleep"
 #     # sleep 10
 # done
 cd server
-npm install
+# npm install
 npm start
