@@ -1,12 +1,14 @@
 const Sequelize = require('sequelize');
-const sequelize = new Sequelize('memorygame1', 'root', 'Madhav@19', {
-  host: 'localhost',
+const sequelize = new Sequelize('memorygame', 'root', 'Madhav@19', {
+  host: 'mysqldb',
   dialect: 'mysql',
   operatorsAliases: false,
-
+  port : 3306,
   pool: {
     max: 5,
     min: 0,
+    acquire: 30000,
+    idle: 10000
   }
 });
 
