@@ -2,7 +2,7 @@ FROM node:latest
 
 WORKDIR ./
 
-COPY ./server/package*.json ./
+COPY ./package*.json ./
 
 #RUN npm install1
 # If you are building your code for production
