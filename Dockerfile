@@ -2,13 +2,13 @@ FROM node:latest
 
 WORKDIR ./
 
-COPY ./package*.json ./
+COPY ./server/package*.json ./
 COPY waitforit.sh ./
 RUN chmod +x waitforit.sh
 #RUN npm install1
 # If you are building your code for production
 # RUN npm ci
-RUN npm install
+# RUN npm install
 
 COPY . .
 

@@ -11,4 +11,6 @@ echo "returning from sleep"
 #     echo OUTPUT
 #     # sleep 10
 # done
+cd server
+npm install
 npm start

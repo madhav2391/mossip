@@ -1,17 +1,19 @@
 version: '3.0'
 services:
   mysqldb:
-    platform: linux/x86_64
+    # platform: linux/x86_64
     image: mysql:5.7
     restart: unless-stopped
     # env_file: ./.env
     environment:
-      - MYSQL_ROOT_PASSWORD=Madhav@19
-      - MYSQL_DATABASE=memorygame
+      MYSQL_ROOT_PASSWORD: Madhav@19
+      MYSQL_DATABASE: memorygame
+      MYSQL_TCP_PORT: 3306
+
     ports:
       - 3307:3306   #Host:Container 
     volumes:
-      - db:/var/lib/mysqld
+      - db:/var/lib/mysql
 
   app:
     depends_on:
@@ -33,4 +35,4 @@ services:
     tty: true
 volumes: 
   db:
-    # driver: local
+    driver: local
