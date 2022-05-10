@@ -1,20 +1,23 @@
 version: '3.0'
 services:
   mysqldb:
+    platform: linux/x86_64
     image: mysql:5.7
-    # restart: unless-stopped
+    restart: unless-stopped
     # env_file: ./.env
     environment:
-      - MYSQL_USER=sampleuser
-      - MYSQL_USER_PASSWORD=Game@123
+      - MYSQL_ROOT_PASSWORD=Madhav@19
       - MYSQL_DATABASE=memorygame
     ports:
       - 3307:3306   #Host:Container 
     volumes:
-      - db:/var/lib/mysql
+      - db:/var/lib/mysqld
+
   app:
     depends_on:
       - mysqldb
+                # condition: service_healthy
+    # command: [./waitforit.sh"]
     build: ./
     restart: unless-stopped
     # env_file: ./.env
@@ -22,12 +25,12 @@ services:
       - 7001:7000
     environment:
       - DB_HOST=mysqldb
-      - DB_USER=sampleuser
-      - DB_PASSWORD=Game@123
+      - DB_USER=root
+      - DB_PASSWORD=Madhav@19
       - DB_NAME=memorygame
       - DB_PORT=3306
     stdin_open: true
     tty: true
 volumes: 
   db:
-    driver: local
+    # driver: local

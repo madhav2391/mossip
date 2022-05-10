@@ -1,5 +1,5 @@
 const Sequelize = require('sequelize');
-const sequelize = new Sequelize('memorygame', 'sampleuser', 'Game@123', {
+const sequelize = new Sequelize('memorygame1', 'root', 'Madhav@19', {
   host: 'localhost',
   dialect: 'mysql',
   operatorsAliases: false,
@@ -36,19 +36,23 @@ const Users = sequelize.define('users', {
         allowNuLL:false
     }
   });
-
+// let temp = false;
+// while (!temp){
 sequelize.sync()
-  .then(()=>
+  .then((res)=>
     {
+        console.log("this is res",res);
      console.log("database has synced");
     }
   )
   .catch((err)=>
     {
+        console.log("this is err",err);
+
         console.error("error creating database");
     }   
   )
-
+// }
   
 module.exports={
     Users
