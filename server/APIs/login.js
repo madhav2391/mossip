@@ -1,5 +1,7 @@
 const user=require('../dataBase.js').Users
 const route=require('express').Router()
+// const {Logger} = require("./../logger");
+var Logger = require('./../logger')
 
 route.post('/',(req,res)=>{
        console.log(req.body.email);
@@ -13,13 +15,18 @@ route.post('/',(req,res)=>{
            console.log(output);
             if(output===null) 
             { 
+              Logger.info('Could not Login');
               res.status(202).redirect('./../../index.html');
             }
             else 
             {
-              res.status(201).redirect('./../../main.html');   
+              Logger.info("Succesfully Logged in");   
+              res.status(201).redirect('./../../main.html');
             } 
-      }).catch((err)=>{res.status(501).send({error:"user is not added"})})
+      }).catch((err)=>{
+        Logger.info("User not added");
+        res.status(501).send({error:"user is not added"});
+      })
  
 })
 

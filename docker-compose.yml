@@ -6,7 +6,7 @@ services:
     restart: unless-stopped
     # env_file: ./.env
     environment:
-      MYSQL_ROOT_PASSWORD: Madhav@19
+      MYSQL_ROOT_PASSWORD: password
       MYSQL_DATABASE: memorygame
       MYSQL_TCP_PORT: 3306
 

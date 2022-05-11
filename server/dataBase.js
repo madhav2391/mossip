@@ -1,6 +1,7 @@
 const Sequelize = require('sequelize');
-const sequelize = new Sequelize('memorygame', 'root', 'Madhav@19', {
-  host: 'mysqldb',
+const {Logger} = require("./logger");
+const sequelize = new Sequelize('memorygame1', 'root', 'password', {
+  host: 'localhost',
   dialect: 'mysql',
   operatorsAliases: false,
   port : 3306,
@@ -43,6 +44,7 @@ const Users = sequelize.define('users', {
 sequelize.sync()
   .then((res)=>
     {
+      // Logger.info("Database synced");
         console.log("this is res",res);
      console.log("database has synced");
     }
@@ -50,7 +52,7 @@ sequelize.sync()
   .catch((err)=>
     {
         console.log("this is err",err);
-
+        // Logger.error("Error creating database");
         console.error("error creating database");
     }   
   )
