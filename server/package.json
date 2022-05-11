@@ -3,7 +3,8 @@
   "version": "1.0.0",
   "main": "dataBase.js",
   "scripts": {
-      "devStart": "nodemon server.js"
+    "devStart": "nodemon server.js",
+    "test": "mocha 'test/**/*.js' --recursive"
   },
   "author": "madhav,shanthan",
   "license": "ISC",
@@ -11,10 +12,20 @@
     "express": "^4.18.0",
     "mysql2": "^2.3.3-rc.0",
     "nodemailer": "^6.7.5",
-    "sequelize": "^6.9.0"
+    "sequelize": "^6.9.0",
+    "winston": "^3.7.2",
+    "winston-daily-rotate-file": "^4.6.1",
+    "winston-datadog": "^1.1.0",
+    "winston-datadog-logger": "^4.0.1"
   },
   "description": "",
   "devDependencies": {
-    "nodemon": "^2.0.16"
+    "chai": "^4.3.6",
+    "cross-env": "^7.0.3",
+    "jest": "^28.1.0",
+    "mocha": "^10.0.0",
+    "nodemon": "^2.0.16",
+    "should": "^13.2.3",
+    "supertest": "^6.2.3"
   }
 }

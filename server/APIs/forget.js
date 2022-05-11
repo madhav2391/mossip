@@ -1,6 +1,7 @@
 const user=require('../dataBase.js').Users
 const route=require('express').Router()
 const nodemailer = require('nodemailer');
+const {Logger} = require("./../logger");
 let random_otp,storeemail;
 
 route.post('/',(req,res)=>{ 
@@ -24,9 +25,11 @@ route.post('/',(req,res)=>{
          if(output===null) 
          {  
              res.status(404).send('email is not present');
+             Logger.error("Email not present");
          }
          else 
          {
+          Logger.info('Email present, sending OTP...');
            res.redirect('../../passwordModifications/conformation.html');  
             const mailOptions = { 
            from: 'webdevlopment0501@gmail.com',
@@ -40,6 +43,7 @@ route.post('/',(req,res)=>{
       console.log(error);
     } else {
       console.log('Email sent: ' + info.response);
+      Logger.info('OTP sent to email');
     }
   });
          
@@ -55,11 +59,13 @@ route.post('/otp',(req,res)=>{
         const otp=parseInt(req.body.changeotp);
              if(otp===random_otp)
              {
-               res.redirect('../../passwordModifications/changePassword.html');  
+               res.redirect('../../passwordModifications/changePassword.html');
+               Logger.info('OTP matched.Changing password');  
               }
              else   
              { 
-               res.status(402).send('otp was incorrect')  
+               res.status(402).send('otp was incorrect')
+               Logger.error('Incorrect OTP');  
              }
 }) 
 
@@ -79,7 +85,8 @@ route.post('/otp/changepassword',(req,res)=>{
                 }
                 else
                 {
-                 res.status(406).send('password and confirmpassword are not matching')   
+                 res.status(406).send('password and confirmpassword are not matching')
+                 Logger.error('password and confirm password not matching');   
                 }
 })
 
