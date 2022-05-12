@@ -29,7 +29,7 @@ services:
     environment:
       - DB_HOST=mysqldb
       - DB_USER=root
-      - DB_PASSWORD=Madhav@19
+      - DB_PASSWORD=password
       - DB_NAME=memorygame
       - DB_PORT=3306
     stdin_open: true
