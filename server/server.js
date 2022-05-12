@@ -11,3 +11,7 @@ app.use('/APIs',require('./APIs'))
 app.listen(7000,()=>{
     console.log("server is connected to http://localhost:7000")
 })
+
+module.exports={
+    app
+}

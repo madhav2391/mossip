@@ -1,6 +1,7 @@
 const Sequelize = require('sequelize');
 // const {Logger} = require("./logger");
 var Logger = require('./logger')
+
 const sequelize = new Sequelize('memorygame1', 'root', 'password', {
   host: 'localhost',
   dialect: 'mysql',
@@ -62,4 +63,6 @@ sequelize.sync()
 module.exports={
     Users
 }
+
+
 
