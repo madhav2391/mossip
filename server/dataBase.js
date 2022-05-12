@@ -46,7 +46,7 @@ const Users = sequelize.define('users', {
 sequelize.sync()
   .then((res)=>
     {
-      Logger.info("Database synced");
+        Logger.info("Database synced");
         console.log("this is res",res);
      console.log("database has synced");
     }
