@@ -1,5 +1,5 @@
 [aws]
-3.111.36.107
+35.175.186.17 ansible_user=ubuntu ansible_ssh_pass=ubuntu
 
 [all:vars]
 ansible_connection=ssh
