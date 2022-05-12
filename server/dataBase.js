@@ -1,5 +1,7 @@
 const Sequelize = require('sequelize');
-const {Logger} = require("./logger");
+// const {Logger} = require("./logger");
+var Logger = require('./logger')
+
 const sequelize = new Sequelize('memorygame1', 'root', 'password', {
   host: 'localhost',
   dialect: 'mysql',
@@ -44,15 +46,15 @@ const Users = sequelize.define('users', {
 sequelize.sync()
   .then((res)=>
     {
-      // Logger.info("Database synced");
+      Logger.info("Database synced");
         console.log("this is res",res);
      console.log("database has synced");
     }
   )
   .catch((err)=>
     {
+        Logger.error("Error creating database");
         console.log("this is err",err);
-        // Logger.error("Error creating database");
         console.error("error creating database");
     }   
   )
@@ -61,4 +63,6 @@ sequelize.sync()
 module.exports={
     Users
 }
+
+
 

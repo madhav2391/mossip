@@ -15,8 +15,8 @@ route.post('/',(req,res)=>{
            console.log(output);
             if(output===null) 
             { 
-              Logger.info('Could not Login');
-              res.status(202).redirect('./../../index.html');
+              Logger.error('Could not Login');
+              res.status(202).res.redirect('./../../index.html');
             }
             else 
             {
@@ -24,7 +24,7 @@ route.post('/',(req,res)=>{
               res.status(201).redirect('./../../main.html');
             } 
       }).catch((err)=>{
-        Logger.info("User not added");
+        Logger.error("User not added");
         res.status(501).send({error:"user is not added"});
       })
  

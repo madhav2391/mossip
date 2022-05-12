@@ -30,12 +30,12 @@ route.post('/',(req,res)=>{
              }
              else
              {
-              Logger.error("Email is already present");
+              Logger.info("Email is already present");
               res.status(400).send('email is already present');
              } 
       })
       .catch((err)=>{
-        Logger.info("User not added");
+        Logger.error("User not added");
         res.status(501).send({error:"user is not added"});  
       }) 
 })

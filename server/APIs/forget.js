@@ -1,7 +1,8 @@
 const user=require('../dataBase.js').Users
 const route=require('express').Router()
 const nodemailer = require('nodemailer');
-const {Logger} = require("./../logger");
+// const {Logger} = require("./../logger");
+var Logger = require('./../logger')
 let random_otp,storeemail;
 
 route.post('/',(req,res)=>{ 
@@ -23,9 +24,9 @@ route.post('/',(req,res)=>{
         
         console.log(output); 
          if(output===null) 
-         {  
+         {
+            Logger.error("Email not present");
              res.status(404).send('email is not present');
-             Logger.error("Email not present");
          }
          else 
          {
@@ -42,8 +43,8 @@ route.post('/',(req,res)=>{
     if (error) { 
       console.log(error);
     } else {
-      console.log('Email sent: ' + info.response);
       Logger.info('OTP sent to email');
+      console.log('Email sent: ' + info.response);
     }
   });
          
@@ -59,13 +60,13 @@ route.post('/otp',(req,res)=>{
         const otp=parseInt(req.body.changeotp);
              if(otp===random_otp)
              {
-               res.redirect('../../passwordModifications/changePassword.html');
-               Logger.info('OTP matched.Changing password');  
+              Logger.info('OTP matched.Changing password');
+               res.redirect('../../passwordModifications/changePassword.html');  
               }
              else   
              { 
-               res.status(402).send('otp was incorrect')
-               Logger.error('Incorrect OTP');  
+              Logger.error('Incorrect OTP');
+               res.status(402).send('otp was incorrect'); 
              }
 }) 
 
@@ -85,8 +86,8 @@ route.post('/otp/changepassword',(req,res)=>{
                 }
                 else
                 {
-                 res.status(406).send('password and confirmpassword are not matching')
-                 Logger.error('password and confirm password not matching');   
+                  Logger.error('password and confirm password not matching');
+                 res.status(406).send('password and confirmpassword are not matching');  
                 }
 })
 
