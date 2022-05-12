@@ -1,0 +1,16 @@
+---
+- name: Deploy docker img
+  hosts: aws
+  tasks:
+    - name: Pull app image
+      docker_image:
+        name: madhavpasumarthy/memgame:latest
+        source: pull
+    - name: Pull mysql
+      docker_image:
+        name: mysql:5.7
+        source: pull
+    - name: Copying docker-compose file
+      copy:
+        src: ./docker-compose.yml
+        dest: ~/
