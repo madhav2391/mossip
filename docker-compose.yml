@@ -20,7 +20,8 @@ services:
       - mysqldb
                 # condition: service_healthy
     # command: [./waitforit.sh"]
-    build: ./
+#     build: ./
+    image: madhavpasumarthy/memgame
     restart: unless-stopped
     # env_file: ./.env
     ports:
