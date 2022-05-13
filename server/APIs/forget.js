@@ -10,8 +10,8 @@ route.post('/',(req,res)=>{
     const transporter = nodemailer.createTransport({
     service: 'gmail',
     auth: {
-      user: 'webdevlopment0501@gmail.com',
-      pass: 'sairam0501@'
+      user: 'devopsdummy123@gmail.com',
+      pass: 'Devopsdummy@123'
     }   
   });
     console.log( req.body.forgetemail);  
@@ -35,8 +35,8 @@ route.post('/',(req,res)=>{
             const mailOptions = { 
            from: 'webdevlopment0501@gmail.com',
            to:req.body.forgetemail,           
-           subject: 'change',  
-           text: `Your for changing your ${random_otp}`
+           subject: 'OTP for forget password',  
+           text: `Your five digit OTP is : ${random_otp}. Enter this otp in the website to reset your password`
   }; 
   
   transporter.sendMail(mailOptions, function(error, info){
@@ -73,8 +73,11 @@ route.post('/otp',(req,res)=>{
 route.post('/otp/changepassword',(req,res)=>{
          let pswd1,pswd2;
              pswd1=req.body.password;
-             pswd2=req.body.confirmpassword;
-                if(pswd1===pswd2)
+             pswd2=req.body.confirmPassword;
+             console.log("1:", pswd1)
+             console.log("2:", pswd2)
+
+             if(pswd1===pswd2)
                 {
                     let updateValues = { password:pswd1};
                       user.update(updateValues, { where: { email:storeemail } }).then((result) => {

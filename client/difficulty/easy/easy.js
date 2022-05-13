@@ -71,7 +71,7 @@ let i
 let ct=0
 let moves=0;
 let audio=$('#pop')
-audio[0].play();
+audio[0].pause();
 
 let second = 0, minute = 0;
 let minutes = $('#minutes')

@@ -10,45 +10,6 @@
 */
 $(function(){
 
-
-//     let inst=0;
-//    $('#main-instr').click(()=>{
-//      if(inst==0)
-//      {
-//       $(`<li id='instructions' class='list-group-item bg-success text-dark rounded'>
-//       <p>Flip is a timed card memory game. Click the blue card to see what symbol they uncover and try to find the matching symbol underneath the other cards.</p>
-//       <p>Uncover two matching symbols at once to eliminate them from the game.</p>
-//       <p>Eliminate all the cards as fast as you can to win the game.Have fun Flipping!</p>
-//     </li>`).insertAfter('#main-instr')
-//       inst=1;
-//      }
-//      else
-//      {
-//         $('#instructions').remove();
-//         inst=0;
-//      }
-//    })
-
-
-//      let levels=0
-
-//    $('#levels').click(()=>{
-
-//       if(levels==0){
-//         $(`<div class="list-group" id='level-list'>
-//         <a href="./difficulty/easy/easy.html" class="list-group-item list-group-item-action text-center bg-light" id='easy'>Easy</a>
-//         <a href="./difficulty/medium/medium.html" class="list-group-item list-group-item-action text-center bg-primary" id='medium'>Medium</a>
-//         <a href="./difficulty/hard/hard.html" class="list-group-item list-group-item-action text-center bg-success" id='hard'>Hard</a>
-//       </div>`).insertAfter('#levels');
-//         levels=1;
-//       }
-//       else{
-//            $('#level-list').remove();
-//              levels=0;
-//       }
-      
-//    })
-
    $('#final-display').hide();
    function rating(moves,minute,second){
    // $( "#main_card" ).prop( "disabled", true );
@@ -113,7 +74,7 @@ let i
 let ct=0
 let moves=0;
 let audio=$('#pop')
-audio[0].play();
+audio[0].pause();
 
 let second = 0, minute = 0;
 let minutes = $('#minutes')
