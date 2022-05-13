@@ -71,6 +71,8 @@ jobs:
 #       run : 
     - name: mysql version
       run : mysql -V
+      
+    - run: mysql.server start
 
     - name: mysql ping check
       run: mysql -h 127.0.0.1 --port 3306 -u root -p${{secrets.MYSQL_ROOT}} -e 'CREATE DATABASE IF NOT EXISTS testgame;'
