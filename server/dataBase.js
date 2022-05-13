@@ -3,7 +3,7 @@ const Sequelize = require('sequelize');
 var Logger = require('./logger')
 
 const sequelize = new Sequelize('memorygame', 'root', 'password', {
-  host: 'mysqldb',
+  host: 'localhost',
   dialect: 'mysql',
   operatorsAliases: false,
   port : 3306,
