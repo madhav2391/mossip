@@ -1,5 +1,5 @@
 const { format, createLogger, transports } = require('winston');
- var DatadogWinston = require('winston-datadog')
+var sentry = require('winston-sentry');
 const { timestamp, combine, printf, errors } = format;
 const logFormat = printf(({ level, message, timestamp, stack }) => {
     return `${timestamp} ${level}: ${stack || message}`;
@@ -29,6 +29,10 @@ transports: [
         level: 'error',
         json: false
     }),
+    new sentry({
+            level: 'error',
+            dsn: "https://7787d3090f8a4eeda3837781e55af88d@o1245576.ingest.sentry.io/6402831"
+    }),
 
     new winston.transports.File({
         name: 'info-file',
@@ -36,6 +40,10 @@ transports: [
         level: 'info',
         json: false
     }),
+    new sentry({
+      level: 'info',
+      dsn: "https://7787d3090f8a4eeda3837781e55af88d@o1245576.ingest.sentry.io/6402831"
+}),
 
     new(require('winston-daily-rotate-file'))({
         filename: `${logDir}/-apimodules.log`,

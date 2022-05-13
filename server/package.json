@@ -6,12 +6,14 @@
     "devStart": "nodemon server.js",
     "migrate": "npx sequelize-cli db:migrate",
     "migrate:reset": "npx sequelize-cli db:migrate:undo:all && npm run migrate",
-    "test": "cross-env NODE_ENV=test jest --testTimeout=10000 --forceExit --detectOpenHandles" ,
+    "test": "cross-env NODE_ENV=test jest --testTimeout=10000 --forceExit --detectOpenHandles",
     "pretest": "cross-env NODE_ENV=test npm run migrate:reset"
   },
   "author": "madhav,shanthan",
   "license": "ISC",
   "dependencies": {
+    "@sentry/node": "^6.19.7",
+    "@sentry/tracing": "^6.19.7",
     "express": "^4.18.0",
     "mysql2": "^2.3.3-rc.0",
     "nodemailer": "^6.7.5",
@@ -19,7 +21,8 @@
     "winston": "^3.7.2",
     "winston-daily-rotate-file": "^4.6.1",
     "winston-datadog": "^1.1.0",
-    "winston-datadog-logger": "^4.0.1"
+    "winston-datadog-logger": "^4.0.1",
+    "winston-sentry": "^0.2.1"
   },
   "description": "",
   "devDependencies": {
