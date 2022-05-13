@@ -69,12 +69,18 @@ jobs:
     
 #     - name: mysql build 
 #       run : 
+    - name: mysql version
+      run : mysql -V
+
+    - name: mysql ping check
+      run: mysql -h 127.0.0.1 --port 3306 -u root -ppassword -e 'CREATE DATABASE IF NOT EXISTS testgame;'
+
     - name: testttt
       working-directory: ./server
       run: npm test
 #     - run: npm test
-#     - name: mysql testing
-#       run : mysql -V
+
+
     - name: Build the Docker image
       run: docker build . --file ./Dockerfile --tag madhavpasumarthy/memgame
    
