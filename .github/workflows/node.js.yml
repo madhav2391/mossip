@@ -87,8 +87,8 @@ jobs:
         mysql_tzinfo_to_sql /usr/share/zoneinfo | mysql --host 127.0.0.1 --port ${{ job.services.mysql.ports[3306] }} -uroot -proot mysql    
 #     - run: mysql.server start
 
-#     - name: mysql ping check
-#       run: mysql -h 127.0.0.1 --port 3306 -u root -p${{secrets.MYSQL_ROOT}} -e 'CREATE DATABASE IF NOT EXISTS testgame;'
+    - name: mysql ping check
+      run: mysql -h 127.0.0.1 --port ${{ job.services.mysql.ports[3306] }} -u root -proot -e 'CREATE DATABASE IF NOT EXISTS testgame;'
     - name: Run tests
       env:
         DB_PASSWORD: root
