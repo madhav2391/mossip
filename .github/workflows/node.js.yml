@@ -29,8 +29,9 @@ jobs:
     - name: List files in the repository
       run: |
           ls
-#     - name: npm ci
-#       run: npm ci
+    - name: npm ci
+      working-directory: ./server
+      run: npm ci
 #     - name: npm run buildddd   
 #       run: npm run build --if-present
     
