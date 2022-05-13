@@ -46,14 +46,14 @@ const Users = sequelize.define('users', {
 sequelize.sync()
   .then((res)=>
     {
-        Logger.info("Database synced");
+      Logger.info("DatabaseSynced");
         console.log("this is res",res);
      console.log("database has synced");
     }
   )
   .catch((err)=>
     {
-        Logger.error("Error creating database");
+        Logger.error("DatabaseNotSynced");
         console.log("this is err",err);
         console.error("error creating database");
     }   
