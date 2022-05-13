@@ -24,7 +24,8 @@ jobs:
       run: |
           pwd
     - name: cd to server
-      run: cd server
+      run: |
+          cd server
     - name: List files in the repository
       run: |
           ls
