@@ -15,4 +15,4 @@
         src: ./docker-compose.yml
         dest: ~/
     - name: docker compose up
-      command: docker-compose up
+      command: docker-compose up -d
