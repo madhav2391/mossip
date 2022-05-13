@@ -13,7 +13,9 @@ RUN chmod +x waitforit.sh
 COPY . .
 
 # EXPOSE 7000
-
+RUN cd server
+RUN npm install
+RUN cd ..
 # CMD [ "node", "server.js" ]
 # RUN ./waitforit.sh
 CMD ./waitforit.sh

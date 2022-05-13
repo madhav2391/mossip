@@ -2,8 +2,8 @@ const Sequelize = require('sequelize');
 // const {Logger} = require("./logger");
 var Logger = require('./logger')
 
-const sequelize = new Sequelize('memorygame1', 'root', 'password', {
-  host: 'localhost',
+const sequelize = new Sequelize('memorygame', 'root', 'password', {
+  host: 'mysqldb',
   dialect: 'mysql',
   operatorsAliases: false,
   port : 3306,
