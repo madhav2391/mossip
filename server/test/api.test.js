@@ -10,6 +10,17 @@ const connectDB=require('../dataBase.js').Users;
 
 
 describe("login Testing", () => {
+    test("Sign up successful", async () => {
+    const response = await request(app)
+      .post("/APIs/signup/")
+      .send({
+        signemail: "abcd@gmail.com",
+        firstname: "madhav",
+        lastname: "reddy",
+        signpass: "qwerty"
+      });
+      expect(response.headers['location']).toBe('/');
+    });
     test("Login successful", async () => {
     const response = await request(app)
       .post("/APIs/login/")
