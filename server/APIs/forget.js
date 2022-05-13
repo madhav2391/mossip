@@ -25,12 +25,12 @@ route.post('/',(req,res)=>{
         console.log(output); 
          if(output===null) 
          {
-            Logger.error("Email not present");
+            Logger.error("InvalidEmail");
              res.status(404).send('email is not present');
          }
          else 
          {
-          Logger.info('Email present, sending OTP...');
+          Logger.info('SendingOTP');
            res.redirect('../../passwordModifications/conformation.html');  
             const mailOptions = { 
            from: 'webdevlopment0501@gmail.com',
@@ -43,7 +43,7 @@ route.post('/',(req,res)=>{
     if (error) { 
       console.log(error);
     } else {
-      Logger.info('OTP sent to email');
+      Logger.info('OTPSent');
       console.log('Email sent: ' + info.response);
     }
   });

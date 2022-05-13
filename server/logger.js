@@ -4,44 +4,6 @@ const { timestamp, combine, printf, errors } = format;
 const logFormat = printf(({ level, message, timestamp, stack }) => {
     return `${timestamp} ${level}: ${stack || message}`;
   });
-// const Logger =  createLogger({
-    
-//     format: combine(
-//     //   format.colorize(),
-//       timestamp({ format: 'YYYY-MM-DD HH:mm:ss' }),
-//       errors({ stack: true }),
-//       logFormat
-//     ),
-//     transports:[
-//                 new transports.Console({
-//                     level: 'info',
-//                     colorize:true
-//                 }),
-//                 new transports.File({
-//                     level : 'info',
-//                     filename: './Logs/Logs.log'
-                   
-//                 }),
-//                 new transports.File({
-//                     level : 'error',
-//                     filename: './Logs/Logs.log'
-        
-//                 }),
-
-//             ]
-//   });
-
-//   // Logger.add(
-// //     new DatadogWinston({
-// //       apiKey: 'c69f14ea7db8ae2d89371c48d101484a',
-// //       hostname: 'shivaram',
-// //       ddsource: 'nodejs',
-// //     })
-// //   )
-//   module.exports = {Logger};
-
-
-
 var winston = require('winston');
 const env = process.env.NODE_ENV;
 const logDir = 'logs';
