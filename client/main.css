@@ -1,17 +1,19 @@
-img{
+/* img{
     width:100%;
 }
+ */
 
-
-.child{
+/* .child{
    position:absolute;
    top:0px;
-}
+} */
 #combined{
-  
+/*   
     margin:100px;
     margin-left:520px;
-    margin-right:370px;
+    margin-right:370px; */
+    margin-left:250px;
+    margin-right:70px;
 }
 
 #level-list{
