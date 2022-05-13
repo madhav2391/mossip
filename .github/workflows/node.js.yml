@@ -25,6 +25,9 @@ jobs:
           pwd
     - name: cd to server
       run: cd server
+    - name: List files in the repository
+      run: |
+          ls
     - name: npm ci
       run: npm ci
 #     - name: npm run buildddd   
