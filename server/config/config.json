@@ -12,7 +12,7 @@
     "database": "testgame",
     "host": "127.0.0.1",
     "dialect": "mysql",
-    "port": $DB_PORT
+    "port": {$DB_PORT}
   },
   "production": {
     "username": "root",
