@@ -298,7 +298,7 @@ function startTimer(){
           let match_audio=$('#match-audio');
             if(inner==='<i class="fas fa-volume-up"></i>')
             {
-              match_audio[0].play() 
+              match_audio[0].pause() 
             }
             else
             {
@@ -404,7 +404,7 @@ function startTimer(){
         else
         {
           $('#volume').html('<i class="fas fa-volume-up"></i>')
-          audio[0].play()
+          audio[0].pause()
         }
       
    })

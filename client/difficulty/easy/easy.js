@@ -323,7 +323,7 @@ let group_card=$('.group_card')
        else
        {
          $('#volume').html('<i class="fas fa-volume-up"></i>')
-         audio[0].play()
+         audio[0].pause()
        }
      
   })

@@ -377,7 +377,7 @@ function startTimer(){
         else
         {
           $('#volume').html('<i class="fas fa-volume-up"></i>')
-          audio[0].play()
+          audio[0].pause()
         }
       
    })
