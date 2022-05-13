@@ -6,7 +6,7 @@ const sequelize = new Sequelize('testgame', 'root', 'root', {
   host: 'localhost',
   dialect: 'mysql',
   operatorsAliases: false,
-  port : 49153,
+  port : 8888,
   pool: {
     max: 5,
     min: 0,
