@@ -89,8 +89,11 @@ jobs:
 
 #     - name: mysql ping check
 #       run: mysql -h 127.0.0.1 --port 3306 -u root -p${{secrets.MYSQL_ROOT}} -e 'CREATE DATABASE IF NOT EXISTS testgame;'
+    - name: Run tests
+      env:
+        DB_PASSWORD: root
+        DB_PORT: ${{ job.services.mysql.ports[3306] }} # get randomly assigned published port
 
-    - name: testttt
       working-directory: ./server
       run: npm test
 #     - run: npm test
