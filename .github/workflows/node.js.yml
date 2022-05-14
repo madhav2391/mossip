@@ -93,7 +93,7 @@ jobs:
       env:
         DB_PASSWORD: root
         DB_PORT: ${{ job.services.mysql.ports[3306] }} # get randomly assigned published port
-
+        NODE_ENV: test
       working-directory: ./server
       run: npm test
 #     - run: npm test
