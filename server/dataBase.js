@@ -1,20 +1,21 @@
 const Sequelize = require('sequelize');
 // const {Logger} = require("./logger");
 var Logger = require('./logger')
+const config = require("./config/config.js")
 
-const sequelize = new Sequelize('testgame', 'root', 'root', {
-  host: 'localhost',
-  dialect: 'mysql',
-  operatorsAliases: false,
-  port : 8888,
-  pool: {
-    max: 5,
-    min: 0,
-    acquire: 30000,
-    idle: 10000
-  }
-});
-
+console.log(config[process.env.NODE_ENV])
+const sequelize = new Sequelize(config[process.env.NODE_ENV].database, config[process.env.NODE_ENV].username,config[process.env.NODE_ENV].password,{
+    host: config[process.env.NODE_ENV].host,
+    dialect: 'mysql',
+    operatorsAliases: false,
+    port : config[process.env.NODE_ENV].port,
+    pool: {
+      max: 5,
+      min: 0,
+      acquire: 30000,
+      idle: 10000
+    }
+  });
 // intializing the user table
 const Users = sequelize.define('users', {
     id: {
