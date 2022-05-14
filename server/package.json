@@ -3,19 +3,25 @@
   "version": "1.0.0",
   "main": "dataBase.js",
   "scripts": {
-    "devStart": "nodemon server.js",
+    "devStart": "export NODE_ENV=development && nodemon server.js",
     "migrate": "npx sequelize-cli db:migrate",
     "migrate:reset": "npx sequelize-cli db:migrate:undo:all && npm run migrate",
-    "test": "cross-env NODE_ENV=test jest --testTimeout=10000 --forceExit --detectOpenHandles" ,
-    "pretest": "cross-env NODE_ENV=test npm run migrate:reset"
+    "test": "export NODE_ENV=test && jest",
+    "dev": "export NODE_ENV=development && nodemon",
+    "pretest": "env-cmd NODE_ENV=test npm run migrate:reset"
+  },
+  "jest": {
+    "testEnvironment": "node"
   },
   "author": "madhav,shanthan",
   "license": "ISC",
   "dependencies": {
+    "dotenv": "^16.0.1",
     "express": "^4.18.0",
     "mysql2": "^2.3.3-rc.0",
     "nodemailer": "^6.7.5",
-    "sequelize": "^6.9.0",
+    "sequelize": "^6.19.0",
+    "sequelize-cli": "^6.4.1",
     "winston": "^3.7.2",
     "winston-daily-rotate-file": "^4.6.1",
     "winston-datadog": "^1.1.0",
@@ -25,6 +31,7 @@
   "devDependencies": {
     "chai": "^4.3.6",
     "cross-env": "^7.0.3",
+    "env-cmd": "^8.0.2",
     "jest": "^28.1.0",
     "mocha": "^10.0.0",
     "nodemon": "^2.0.16",
