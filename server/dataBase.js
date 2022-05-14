@@ -4,11 +4,11 @@ var Logger = require('./logger')
 const config = require("./config/config.js")
 
 console.log(config[process.env.NODE_ENV])
-const sequelize = new Sequelize(config[process.env.NODE_ENV].database, config[process.env.NODE_ENV].username,config[process.env.NODE_ENV].password,{
-    host: config[process.env.NODE_ENV].host,
+const sequelize = new Sequelize(config[process.env.NODE_ENV || "development" ].database, config[process.env.NODE_ENV|| "development" ].username,config[process.env.NODE_ENV|| "development" ].password,{
+    host: config[process.env.NODE_ENV|| "development" ].host,
     dialect: 'mysql',
     operatorsAliases: false,
-    port : config[process.env.NODE_ENV].port,
+    port : config[process.env.NODE_ENV|| "development" ].port,
     pool: {
       max: 5,
       min: 0,
