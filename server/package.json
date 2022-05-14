@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "main": "dataBase.js",
   "scripts": {
-   "start":"export NODE_ENV=development node index.js",
+   "start":"export NODE_ENV=development && node index.js",
    "devStart": "nodemon server.js",
     "migrate": "npx sequelize-cli db:migrate",
     "migrate:reset": "npx sequelize-cli db:migrate:undo:all && npm run migrate",
