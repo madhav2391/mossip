@@ -27,7 +27,8 @@
     "winston-daily-rotate-file": "^4.6.1",
     "winston-datadog": "^1.1.0",
     "winston-datadog-logger": "^4.0.1",
-    "winston-sentry": "^0.2.1"
+    "winston-sentry": "^0.2.1",
+    "next":"^12.2.3"
   },
   "description": "",
   "devDependencies": {
