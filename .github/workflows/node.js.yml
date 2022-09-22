@@ -25,7 +25,7 @@ jobs:
         ports:
         - 8888:3306
         options: --health-cmd="mysqladmin ping" --health-interval=10s --health-timeout=5s --health-retries=3
-    if: ${{ github.actor == 'dependabot[bot]' }}
+    if: ${{ github.actor == 'dependabot[bot]' || github.actor != 'dependabot[bot]' }}
     steps:
     - uses: actions/checkout@v3
     #- uses: actions/setup-node@v3
@@ -66,7 +66,7 @@ jobs:
     needs: build-test
 
     runs-on: ubuntu-latest
-    if: ${{ github.actor == 'dependabot[bot]' }}
+    if: ${{ github.actor == 'dependabot[bot]'  || github.actor != 'dependabot[bot]' }}
     steps:
     - uses: actions/checkout@v3
     - name: Build the Docker image
@@ -86,7 +86,7 @@ jobs:
 
     needs: Docker-build
     runs-on: ubuntu-latest
-    if: ${{ github.actor == 'dependabot[bot]' }}
+    if: ${{ github.actor == 'dependabot[bot]'  || github.actor != 'dependabot[bot]' }}
 
     steps:
     - uses: actions/checkout@v2
