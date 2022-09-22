@@ -29,6 +29,8 @@ jobs:
     steps:
     - uses: actions/checkout@v3
     #- uses: actions/setup-node@v3
+    - name: printing actor
+      run: echo github.actor
     - name: List files in the repository
       run: |
           ls
